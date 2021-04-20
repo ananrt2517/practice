@@ -2,21 +2,22 @@ import {
   GET_CATS_REQUEST,
   GET_CATS_SUCCESS,
   GET_CATS_FAILURE,
-  getCatsSuccess
-} from "../actions/actions";
-import { ICatSuccess } from '../actions/action.Interfaces';
+  getCatsSuccess,
+} from '../actions/actions'
+import { ICatSuccess } from '../actions/action.Interfaces'
 
-export interface IState{ 
+export interface IState {
   data: ICatSuccess[]
 }
 
-
 const initialState = {
-   data: []
-};
+  data: [],
+}
 
-
-export default (state: IState = initialState , action : ReturnType<typeof getCatsSuccess>) => {
+export default (
+  state: IState = initialState,
+  action: ReturnType<typeof getCatsSuccess>
+) => {
   switch (action.type) {
     case GET_CATS_REQUEST:
       return {
@@ -24,15 +25,16 @@ export default (state: IState = initialState , action : ReturnType<typeof getCat
       }
     case GET_CATS_SUCCESS:
       return {
-        ...state, data: action.payload
-      };
+        ...state,
+        data: action.payload,
+      }
     case GET_CATS_FAILURE:
       return {
-        ...state
-      };
+        ...state,
+      }
     default:
       return {
         ...state,
-      };
+      }
   }
-};
+}

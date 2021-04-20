@@ -1,8 +1,8 @@
-import http from './http';
+import http from './http'
 
-export const getCatsApi = async (id : string) => {
+export const getCatsApi = async (id: string) => {
   try {
-    const  data = await http.get(`/search?q=${id}`)
+    const data = await http.get(`/search?q=${id}`)
     return data.data
   } catch (error) {
     return error.message

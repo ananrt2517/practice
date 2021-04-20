@@ -1,5 +1,4 @@
-import styled from 'styled-components';
-
+import styled from 'styled-components'
 
 export const HomeDiv = styled.div`
   width: 100%;
@@ -19,7 +18,7 @@ export const Input = styled.input`
   background-color: #dadde3;
   border-radius: 10px;
   padding: 15px 30px;
-  :focus{
+  :focus {
     outline: none;
   }
 `

@@ -1,4 +1,4 @@
-export interface ICatSuccess { 
+export interface ICatSuccess {
   id: string
   name: string
   temperament: string
