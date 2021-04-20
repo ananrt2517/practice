@@ -1,4 +1,5 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement } from 'react';
+import { HomeDiv, Input, TitleDiv } from './HomeStyles';
 
 interface Props {
   
@@ -6,8 +7,9 @@ interface Props {
 
 export default function Home({}: Props): ReactElement {
   return (
-    <div>
-      
-    </div>
+    <HomeDiv>
+      <TitleDiv>Search for kitty</TitleDiv>
+      <Input placeholder="Type here..."></Input>
+    </HomeDiv>
   )
 }
