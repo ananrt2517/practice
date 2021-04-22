@@ -11,7 +11,6 @@ import { ICatSuccess } from './actions/action.Interfaces'
 
 function* getCats(action: ReturnType<typeof getCatsRequest>) {
   try {
-    console.log(action)
     const data: ICatSuccess[] = yield call(getCatsApi, action.query)
     yield put(getCatsSuccess(data))
   } catch {

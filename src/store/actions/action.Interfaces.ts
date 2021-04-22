@@ -29,3 +29,7 @@ export interface ICatSuccess {
   stranger_friendly: number
   vocalisation: number
 }
+
+export interface ICatData{ 
+  data: ICatSuccess[]
+}

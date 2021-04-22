@@ -4,10 +4,10 @@ import {
   GET_CATS_FAILURE,
   getCatsSuccess,
 } from '../actions/actions'
-import { ICatSuccess } from '../actions/action.Interfaces'
+import { ICatData } from '../actions/action.Interfaces'
 
 export interface IState {
-  data: ICatSuccess[]
+  search: ICatData
 }
 
 const initialState = {
@@ -15,7 +15,7 @@ const initialState = {
 }
 
 export default (
-  state: IState = initialState,
+  state: ICatData = initialState,
   action: ReturnType<typeof getCatsSuccess>
 ) => {
   switch (action.type) {
