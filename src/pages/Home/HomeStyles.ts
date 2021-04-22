@@ -21,3 +21,7 @@ export const Input = styled.input`
     outline: none;
   }
 `
+export const CatDiv = styled.div`
+ display: flex;
+ flex-wrap: wrap
+`

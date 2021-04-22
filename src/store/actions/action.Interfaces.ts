@@ -28,6 +28,7 @@ export interface ICatSuccess {
   social_needs: number
   stranger_friendly: number
   vocalisation: number
+  description: string
 }
 
 export interface ICatData{ 
