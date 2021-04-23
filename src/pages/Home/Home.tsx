@@ -5,10 +5,11 @@ import { getCatsRequest } from '../../store/actions/actions'
 import { IState } from '../../store/reducers/searchReducer'
 import { ICatSuccess } from '../../store/actions/action.Interfaces'
 import CatCard from '../../components/CatCard/CatCard'
+import { AppState } from '../../store/reducers'
 
 export default function Home(): ReactElement {
   const [term, setTerm] = useState('')
-  const store: any = useSelector<IState>(state => state.search.data)
+  const store = useSelector((state: AppState) => state.search.data)
 
   const dispatch = useDispatch()
 
@@ -31,10 +32,11 @@ export default function Home(): ReactElement {
         {store?.map((item: ICatSuccess) => (
           <>
             <CatCard
+              key={item?.id}
               name={item?.name}
               origin={item?.origin}
               description={item?.description}
-            ></CatCard>
+              id={item?.id}></CatCard>
           </>
         ))}
       </CatDiv>

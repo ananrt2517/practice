@@ -30,3 +30,8 @@ export const Button = styled.button`
     outline: none;
   }
 `
+export const Link = styled.a`
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+`

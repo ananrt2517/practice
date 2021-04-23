@@ -7,7 +7,7 @@ export default function Header({}: Props): ReactElement {
   return (
     <HeaderDiv>
       <Logo>
-        <Link href='/home'>LOGO</Link>
+        <Link href='/'>LOGO</Link>
       </Logo>
     </HeaderDiv>
   )
